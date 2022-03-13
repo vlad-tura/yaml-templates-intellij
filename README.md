@@ -12,6 +12,10 @@ Adds support for YAML completion based on user-defined templates.
 - Start definining templates. 
 - Each template should have a `prefix:` key, defining the autocomplete lookup prefix,
 and a `data:` key, containing the data that will be inserted
+- There can be multiple templates in one file, separated by ---
+<br>
+<b>Each one should have a `prefix` and `data` key</b>
+- Autocomplete also looks for the content of the templates, as well as the prefix name
 
 Example:
 ```
@@ -20,10 +24,6 @@ data:
   my:
     data: here
 ```
-
-Check the [documentation](https://github.com/JetBrains/intellij-platform-plugin-template)
-to see examples of templates.
-
 <!-- Plugin description end -->
 
 
