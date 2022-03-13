@@ -1,18 +1,23 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.vladtura.yamltemplatesintellij</id>
-    <name>yaml-templates-intellij</name>
-    <vendor>vlad-tura</vendor>
+    <name>YAML Templates</name>
+    <vendor>vladTura</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.plugins.yaml</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.vladtura.yamltemplatesintellij.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.vladtura.yamltemplatesintellij.services.MyProjectService"/>
+        <completion.contributor
+            language="yaml"
+            implementationClass="com.github.vladtura.yamltemplatesintellij.completion.YamlCompletionContributor"
+        />
+        <notificationGroup id="YAML Templates Errors" displayType="BALLOON" />
+        <notificationGroup id="YAML Templates Info" displayType="BALLOON" />
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.vladtura.yamltemplatesintellij.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
+        <listener class="com.github.vladtura.yamltemplatesintellij.listener.VfsListener"
+                  topic="com.intellij.openapi.vfs.newvfs.BulkFileListener"/>
     </applicationListeners>
 </idea-plugin>
