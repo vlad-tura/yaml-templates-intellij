@@ -3,6 +3,8 @@
 # yaml-templates-intellij Changelog
 
 ## [Unreleased]
+
+## [0.0.3]
 ### Added
 - Removed scheduled for removal usage of `NotificationGroup.createNotification`
 - Contributing guidelines
