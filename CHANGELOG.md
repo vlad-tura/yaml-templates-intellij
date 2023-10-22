@@ -4,6 +4,11 @@
 
 ## [Unreleased]
 ### Added
+- Add support for intellij 2022.* and 2023.*
+- Use the latest IntelliJ Platform Plugin Template
+
+## [0.0.3]
+### Added
 - Removed scheduled for removal usage of `NotificationGroup.createNotification`
 - Contributing guidelines
 - License information
