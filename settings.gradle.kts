@@ -1,1 +1,5 @@
-rootProject.name = "yaml-templates-intellij"
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.7.0"
+}
+
+rootProject.name = "IntelliJ Platform Plugin Template"
